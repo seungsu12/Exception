@@ -37,6 +37,7 @@ public class UserHandlerExceptionResolver implements HandlerExceptionResolver {
                 response.setContentType("application/json");
                 response.setCharacterEncoding("utf-8");
                 response.getWriter().write(result);
+                return new ModelAndView();
             }else{
                 //text/html
                 return new ModelAndView("error-page/500");
